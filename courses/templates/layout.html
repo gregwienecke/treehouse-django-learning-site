@@ -1,0 +1,15 @@
+{% load staticfiles %}
+
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+	<nav>
+		<a href="{% url 'home' %}">Home</a>
+		<a href="{% url 'courses' %}">Courses</a>
+	</nav>
+	{% block content %}{% endblock %}
+</body>
+</html>
